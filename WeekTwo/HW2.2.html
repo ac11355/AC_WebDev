@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Cookbook — Submit a Recipe</title>
+    <style>
+      #top {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Command + / to comment in whatever language you are currently writing -->
+
+    <h1>Class Cookbook Submission Form</h1>
+    <p id="top">
+      Enter information that will direct you to a recipe!
+    </p>
+
+    <!-- ============================================================
+         THE FORM GOES HERE.
+
+         We build it together, one fieldset at a time:
+
+           1. Who is cooking?   text, email, password
+           2. The recipe        text, number, range, select
+           3. How hard is it?   radio    (one answer only)
+           4. Dietary tags      checkbox (several answers)
+           5. The actual food   textarea
+           6. Extras            file, url, date, color
+           7. Buttons           submit, reset
+
+         Start with the <form> tag itself and its attributes, then add
+         one fieldset at a time. Do not skip ahead -- the point is to
+         watch what each input type does in the browser as we add it.
+         ============================================================ -->
+         <!-- The form tag itself is not visible on the page. I t waraps form elements and bakes in some
+          browser behabior. You can hit enter key to submit a small form. Clicking any button inside 
+          the form will submit the form  -->
+          <!-- GET to retrieve data, POST to write to a DB or send data to a restful API endpoint
+           PUT edit/update an existing entry int he db, DELETE deletes a record from the DB -->
+          <form name="contactUs" target="_self" method="GET"></form>
+          <fieldset>
+            <legend> Who is cooking?</legend>
+            <!-- for and name should match -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" 
+            placeholder="First Name" 
+            required 
+            placeholder="Dummy Text Hint"/>
+              <br />
+              <br />
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" 
+            placeholder="Last Name" 
+            required 
+            placeholder="Dummy Text Hint"/> <br /> <br />
+             <p> Enter your email for personalized recommendations!</p>
+          <label for="email">Email:</label>
+          <input name="email" id="email" type="email" required 
+          placeholder="your.email@example.com"/>
+          <br /> <br /> 
+          <label for="password">Password:</label>
+          <input name="password" id="password" type="password" required/>
+          <br /> <br />
+        <input type="submit" value="Submit" type="button"/>
+        </fieldset>
+    
+        <fieldset>
+        <legend> Personalize your recipe!</legend>
+          <label for="servingSize">How many servings would you like?</label>
+          <label><input type="number" id="servingSize" name="servingSize" min="1" value="1"/>  </label> <br />
+
+          <label for="prepTime"> How much time do you have to prep?</label>
+        <label><input type="number" id="prepTime" name="prepTime" min="0" max="120" value="30"/>  </label> <br />
+
+        <label for="spiceLevel">How much spice can you tolderate?</label>
+        <label><input type="range" id="spiceLevel" name="spiceLevel" min="0" max="10" value="5"/>  </label> <br
+
+        <label for="difficultyLevel">How difficult would you like the recipe to be?</label> <br />
+    <input type="radio" id="easy" name="difficultyLevel" value="Easy">
+    <label for="easy">EASY</label><br>
+    <input type="radio" id="medium" name="difficultyLevel" value="Medium">
+    <label for="medium">MEDIUM</label><br>
+    <input type="radio" id="hard" name="difficultyLevel" value="Hard">
+    <label for="hard">HARD</label> <br />
+    <label for="dietaryTags" id="dietaryTags">Dietary Restrictions:</label> <br />
+    <label><input type="checkbox" name="dietaryTags" value="vegetarian"/> Vegetarian </label>
+    <label><input type="checkbox" name="dietaryTags" value="vegan"/> Vegan </label>
+    <label><input type="checkbox" name="dietaryTags" value="gluten-free"/> Gluten-Free </label>
+
+        </form>
+        </fieldset>
+        <fieldset>
+             <legend> Done? </legend>
+            <label for="finishedDish"> Upload your finished dish!</label> <br /><br />
+            <label><input type="file" id="finishedDish" name="finishedDish"/></label> <br /><br />
+            <label for="OGRecipe"> Link to original recipe!</label> <br /><br />
+            <label><input type="url" id="OGRecipe" name="OGRecipe"/></label> <br /><br />
+            <label for="date"> When did you make this dish?</label> <br /> <br />
+            <label><input type="date" id="date" name="date"/></label> <br /><br />
+            <label for="color"> Select a color to put it in your cookbook</label> <br />
+            <label><input type="color" id="color" name="color"/></label> <br /> <br />
+            <label><input type="submit" value="Submit" type="button"/></label>
+        </fieldset>
+    
+       
+      <a href="#top">Back to Top</a></p>
+  </body>
+</html>
