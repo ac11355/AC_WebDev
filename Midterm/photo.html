@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="inner-page">
+    <!-- LEFT COLUMN: logo (home). Stays in view while you scroll. -->
+    <aside class="side">
+      <a class="logo" href="index.html" aria-label="Azelin Chen, home"><img src="img/thebestazelin.svg" alt="" /></a>
+    </aside>
+
+    <div class="inner-main">
+      <nav>
+        <ul>
+          <li><a href="design.html">Design</a>
+            <ul>
+              <li><a href="design.html#马到成功 一马当先 “Succeed in Year of the Horse” [2025]">马到成功 一马当先 “Succeed in Year of the Horse” [2025]</a></li>
+              <li><a href="design.html#2026Goals">2026 Goals</a></li>
+              <li><a href="design.html#Manchild">Manchild</a></li>
+              <li><a href="design.html#COMEEAT">COME EAT</a></li>
+              <li><a href="design.html#Laufey's Bewitched Unofficial Digital Redention">Laufey's Bewitched Unofficial Digital Redention</a></li>
+            </ul>
+          </li>
+          <li><a href="video.html">Video</a>
+            <ul>
+              <li><a href="video.html#video-1">No One Noticed Music Video</a></li>
+              <li><a href="video.html#video-2">Video 2</a></li>
+              <li><a href="video.html#video-3">Video 3</a></li>
+            </ul>
+          </li>
+          <li><a href="photo.html" aria-current="page">Photo</a></li>
+          <li><a href="choreo.html">Choreo</a>
+            <ul>
+              <li><a href="choreo.html#choreo-1">Choreo 1</a></li>
+              <li><a href="choreo.html#choreo-2">Choreo 2</a></li>
+              <li><a href="choreo.html#choreo-3">Choreo 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="pieces">
+        <h1 class="visually-hidden">Photo</h1>
+
+        <!-- THE GALLERY: click a photo to see it large -->
+        <div class="gallery" id="gallery">
+          <a class="gallery-item" href="#photo-1"><img src="img/photo/PortPhoto1.JPG" alt="Photo 1" /></a>
+          <a class="gallery-item" href="#photo-2"><img src="img/photo/cdmx.JPG" alt="Photo 2" /></a>
+          <a class="gallery-item" href="#photo-3"><img src="img/photo/statenislandferry.jpg" alt="Photo 3" /></a>
+          <a class="gallery-item" href="#photo-4"><img src="img/photo/IMG_4836.png" alt="Photo 4" /></a>
+          <a class="gallery-item" href="#photo-5"><img src="img/photo/IMG_4963.jpg" alt="Photo 5" /></a>
+        </div>
+      </main>
+    </div>
+
+    <!-- ENLARGED VIEWS: one per photo. The id (photo-1, photo-2...) matches the links on the home page,
+         so clicking a photo on the home page opens it large here. Click anywhere to close. -->
+    <a class="lightbox" id="photo-1" href="#gallery" aria-label="Close photo">
+      <span class="lightbox-x" aria-hidden="true">&times;</span>
+      <img src="img/photo/PortPhoto1.JPG" alt="Photo 1" />
+    </a>
+
+    <a class="lightbox" id="photo-2" href="#gallery" aria-label="Close photo">
+      <span class="lightbox-x" aria-hidden="true">&times;</span>
+      <img src="img/photo/cdmx.JPG" alt="Photo 2" />
+    </a>
+
+    <a class="lightbox" id="photo-3" href="#gallery" aria-label="Close photo">
+      <span class="lightbox-x" aria-hidden="true">&times;</span>
+      <img src="img/photo/statenislandferry.jpg" alt="Photo 3" />
+    </a>
+
+    <a class="lightbox" id="photo-4" href="#gallery" aria-label="Close photo">
+      <span class="lightbox-x" aria-hidden="true">&times;</span>
+      <img src="img/photo/IMG_4836.png" alt="Photo 4" />
+    </a>
+    <a class="lightbox" id="photo-5" href="#gallery" aria-label="Close photo">
+      <span class="lightbox-x" aria-hidden="true">&times;</span>
+      <img src="img/photo/IMG_4963.jpg" alt="Photo 5" />
+  </body>
+</html>
