@@ -142,7 +142,7 @@ html {
   }
 }
 
-/* Keeps anchor targets from hiding under the sticky nav */
+
 [id] {
   scroll-margin-top: 6rem;
 }
@@ -160,11 +160,7 @@ section {
   max-width: 40rem;
 }
 
-/* HOME PAGE: fits one screen, the page itself never scrolls
-   Layout (from the wireframe):
-     [ info box ] [ nav: Design, Photo, Video, Choreo ]
-     [ info box ] [ vertical art, scrolls LEFT        ]
-     [ horizontal art, scrolls RIGHT, full width      ]       */
+
 .home-page {
   --maroon: #8a2c22;
   height: 100vh;
@@ -181,7 +177,6 @@ section {
   overflow: hidden;
 }
 
-/* Nav on the home page: just the three art sections, left-aligned */
 .home-page nav {
   grid-area: nav;
 }
@@ -198,9 +193,7 @@ section {
   font-size: 2rem;
 }
 
-/* THE PROTECTED BOX: logo, name, About.
-   It sits above the art (z-index) and has its own white background,
-   and the vertical art is clipped before it reaches this box. */
+
 .home-info {
   grid-area: info;
   position: relative;
@@ -263,14 +256,14 @@ section {
   color: black;
 }
 
-/* HOME: SCROLLING ART ROWS */
+/* HOME: SCROLLING ART ROWS https://www.bennadel.com/blog/4536-creating-a-marquee-effect-with-css-animations.htm*/
 .marquee {
   min-width: 0;
   min-height: 0;
   display: flex;
-  overflow: hidden;      /* fallback for older browsers */
-  overflow-x: clip;      /* clip at the edges of the row (this is what protects the info box)... */
-  overflow-y: visible;   /* ...but let enlarged art grow past the row */
+  overflow: hidden;      
+  overflow-x: clip;      
+  overflow-y: visible;
 }
 
 .marquee-vertical {
@@ -278,7 +271,7 @@ section {
 }
 
 .marquee-horizontal {
-  grid-area: horiz;
+  grid-area: horizontal;
 }
 
 /* Lift the hovered row above the other row so enlarged art isn't covered */
@@ -325,7 +318,7 @@ section {
   display: block;
   width: auto;
   height: 100%;
-  aspect-ratio: 16 / 9;   /* change to match your video (for example 9 / 16 if it is vertical) */
+  aspect-ratio: 16 / 9;   
   object-fit: cover;
 }
 .marquee-group img {
@@ -340,7 +333,7 @@ section {
   }
 }
 
-/* If someone prefers less motion, they scroll the rows by hand instead */
+
 @media (prefers-reduced-motion: reduce) {
   .marquee {
     overflow-x: auto;
@@ -428,7 +421,7 @@ section {
   text-shadow: 0 0 1px rgba(207, 95, 148, 0.5);
 }
 
-/* The pieces: big image (or video), then the title */
+
 .pieces {
   padding: 1rem 1.5rem 3rem;
 }
