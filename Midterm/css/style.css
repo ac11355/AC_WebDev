@@ -15,7 +15,7 @@ img {
   height: auto;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
   position: sticky;
   top: 0;
@@ -49,7 +49,7 @@ nav a:hover {
   color: #cf5f94;
 }
 
-/* subnav styles */
+/* SUBNAV */
 nav li ul {
   display: none;
   position: absolute;
@@ -68,13 +68,46 @@ nav li:focus-within ul {
 
 nav li li {
   display: block;
+  position: static;      
 }
 
+/* The text of each dropdown item (small, white on the black box) */
 nav li li a {
+  display: block;
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 0.95rem;
   text-align: left;
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 100%;            
+  width: 16rem;
+  height: auto;
+  max-height: 70vh;
+  margin-left: 0.75rem;
+  object-fit: contain;
+  background: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+nav li li a:hover .preview,
+nav li li a:focus-visible .preview {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Touch screens can't hover, so skip previews on phones */
+@media screen and (width < 768px) {
+  .preview {
+    display: none;
+  }
 }
 
 /* JUMBOTRON */
@@ -271,7 +304,7 @@ section {
 }
 
 .marquee-horizontal {
-  grid-area: horizontal;
+  grid-area: horiz;
 }
 
 /* Lift the hovered row above the other row so enlarged art isn't covered */
@@ -408,8 +441,8 @@ section {
 
 .side-list a {
   display: block;
-  padding: 0.25rem 0;
-  font-size: 1.3rem;
+  padding: 0.4rem 0;
+  font-size: 1rem;
   color: black;
   text-decoration: none;
   text-align: left;
