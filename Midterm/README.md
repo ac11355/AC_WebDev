@@ -1,2 +1,0 @@
-# WebDevMidterm
-# WebDevMidterm
